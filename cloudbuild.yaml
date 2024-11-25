@@ -2,7 +2,7 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       - "pull"
-      - "docker.io/princetondalmet/princeton-flask-backend:latest" # Pulling the image from Docker Hub
+      - "docker.io/princetondalmet/princeton-flask-backend:latest" # Correct image reference
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -11,7 +11,7 @@ steps:
       - "update-container"
       - "princeton-flask-backend-instance"
       - "--container-image"
-      - "docker.io/princetondalmet/princeton-flask-backend:latest" # Using Docker Hub image directly
+      - "docker.io/princetondalmet/princeton-flask-backend:latest" # Correct image reference
       - "--zone"
       - "northamerica-northeast2-a"
 
